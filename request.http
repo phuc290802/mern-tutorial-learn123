@@ -1,0 +1,48 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "henrry",
+    "password": "test"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "phuc",
+    "password": "test"
+}
+
+###
+
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjgxMTMxMTJhMzg0OTUxY2U4YTAwOTUiLCJpYXQiOjE3MTk5MzM5NTN9.5ptvnsvbDEH9dRgGbahRsvGULVrVlycHmRyBFCf4ekw
+
+{
+    "title": "JAVA",
+    "description": "JAVA",
+    "url": "JAVA.com",
+    "status": "TO LEARN"
+}
+
+###
+
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjgxMTMxMTJhMzg0OTUxY2U4YTAwOTUiLCJpYXQiOjE3MTk3Mzg4MDh9.1PrFS3a6XuppLqwjfted5OTqkKkt3BGYomH4D-pre5g
+
+###
+
+PUT http://localhost:5000/api/posts/668113112a384951ce8a0095
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjgxMTMxMTJhMzg0OTUxY2U4YTAwOTUiLCJpYXQiOjE3MTk3Mzg4MDh9.1PrFS3a6XuppLqwjfted5OTqkKkt3BGYomH4D-pre5g
+
+{
+    "title": "JAVA",
+    "description": "JAVA",
+    "url": "java.com",
+    "status": "TO LEARN",
+}
